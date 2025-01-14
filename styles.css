@@ -1,0 +1,158 @@
+/* Estilos principais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #b22222, #8b0000);
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* Necessário para posicionamento dos corações */
+}
+
+/* Corações nas bordas */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"%3E%3Cpath fill="%23ff6f6f" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6.5 3.5 5 5.5 5c1.54 0 3.04.99 3.57 2.36h1.87C14.46 5.99 15.96 5 17.5 5 19.5 5 21 6.5 21 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"%3E%3C/path%3E%3C/svg%3E');
+    background-size: 30px 30px;
+    opacity: 0.8;
+}
+
+/* Posição dos corações */
+body::before {
+    top: 10%;
+    left: 10%;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+}
+
+body::after {
+    bottom: 10%;
+    right: 10%;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #8b0000;
+    color: #fff;
+    padding: 30px 0;
+    border-bottom: 3px solid #b22222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    letter-spacing: 2px;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 40px 20px;
+    flex-grow: 1;
+}
+
+.messages {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.messages p {
+    font-size: 1.6rem;
+    margin: 15px 0;
+    color: #ffc1c1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    line-height: 1.5;
+}
+
+.messages p:last-of-type {
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #ff8c8c;
+}
+
+/* Contador */
+.counter {
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+.counter h2 {
+    font-size: 2rem;
+    color: #ff6f6f;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #4b0000;
+    color: #fff;
+    padding: 20px 0;
+    border-top: 3px solid #8b0000;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Botão */
+button {
+    background-color: #ff6f6f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #ff4f4f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .messages {
+        padding: 15px;
+    }
+
+    .messages p {
+        font-size: 1.4rem;
+    }
+
+    .counter h2 {
+        font-size: 1.6rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
