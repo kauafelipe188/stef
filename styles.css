@@ -19,23 +19,23 @@ body::before, body::after {
     position: absolute;
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"%3E%3Cpath fill="%23ff6f6f" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6.5 3.5 5 5.5 5c1.54 0 3.04.99 3.57 2.36h1.87C14.46 5.99 15.96 5 17.5 5 19.5 5 21 6.5 21 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"%3E%3C/path%3E%3C/svg%3E');
     background-size: 30px 30px;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 /* Posição dos corações */
 body::before {
-    top: 10%;
-    left: 10%;
-    width: 50px;
-    height: 50px;
+    top: 5%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
     background-size: contain;
 }
 
 body::after {
-    bottom: 10%;
-    right: 10%;
-    width: 50px;
-    height: 50px;
+    bottom: 5%;
+    right: 5%;
+    width: 40px;
+    height: 40px;
     background-size: contain;
 }
 
@@ -43,14 +43,15 @@ body::after {
 header {
     background-color: #8b0000;
     color: #fff;
-    padding: 30px 0;
+    padding: 20px 0;
     border-bottom: 3px solid #b22222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     letter-spacing: 2px;
 }
@@ -59,6 +60,10 @@ header h1 {
 main {
     padding: 40px 20px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .messages {
@@ -102,9 +107,10 @@ main {
 footer {
     background-color: #4b0000;
     color: #fff;
-    padding: 20px 0;
+    padding: 15px 0;
     border-top: 3px solid #8b0000;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 footer p {
@@ -118,22 +124,24 @@ button {
     background-color: #ff6f6f;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
 }
 
 button:hover {
     background-color: #ff4f4f;
+    transform: scale(1.05);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .messages {
@@ -154,5 +162,86 @@ button:hover {
 
     button {
         font-size: 0.9rem;
+    }
+}
+/* Secção dos sonhos */
+.dreams {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dreams h2 {
+    color: #ff6f6f;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.dreams p {
+    font-size: 1.5rem;
+    color: #ffc1c1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    line-height: 1.6;
+    margin: 0;
+}
+/* Botão especial */
+button.special {
+    background-color: #ff6f6f;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+button.special:hover {
+    background-color: #ff4f4f;
+    transform: scale(1.1);
+}
+
+/* Página de elogios */
+.compliments {
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.compliments h2 {
+    color: #ff6f6f;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.compliments ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.5rem;
+    color: #ffc1c1;
+    line-height: 1.8;
+}
+
+.compliments ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

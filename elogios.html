@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elogios e Contador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gerador de Elogios</h1>
+    </header>
+    <main>
+        <div class="random-compliment">
+            <p id="compliment">Clique no botão para receber um elogio!</p>
+        </div>
+        <button id="generate-btn">Gerar Elogio</button>
+        <div class="counter">
+            <p id="time"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Feito com carinho ❤️</p>
+    </footer>
+
+    <!-- JavaScript direto no HTML -->
+    <script>
+// Gerador de elogios
+document.addEventListener('DOMContentLoaded', () => {
+    const compliments = [
+        "Seu sorriso ilumina qualquer ambiente.",
+        "Você tem um brilho único nos olhos.",
+        "Seu jeito brincalhão é contagiante.",
+        "É lindo como você consegue ser tão autêntica.",
+        "Você é carismática de um jeito que ninguém mais é.",
+        "A forma como você fica vermelha quando está com vergonha é simplesmente fofa!",
+        "Sua risada é música para os ouvidos.",
+        "Você tem uma energia tão boa, sempre traz alegria para os outros.",
+        "A sua energia é um presente para quem está por perto.",
+        "Você consegue transformar situações simples em momentos inesquecíveis.",
+        "Sua beleza é única, não há como compará-la.",
+        "Eu sou encantado pela sua timidez, ela só te deixa mais charmosa.",
+        "Seu sorriso é capaz de iluminar qualquer lugar.",
+        "Você tem uma luz própria que é impossível ignorar.",
+        "Eu adoro como você se preocupa com os outros, isso é raro e especial.",
+        "Seu olhar transmite uma paz, mas a sua energia é o que realmente faz a diferença.",
+        "Sua forma de ser é tão genuína que é difícil não se apaixonar por você.",
+        "Você é o tipo de pessoa que faz a diferença na vida de quem te conhece.",
+        "Você tem um jeitinho que torna tudo mais bonito.",
+        "Eu adoro como você consegue ser tímida e, ao mesmo tempo, tão encantadora.",
+        "Sua presença traz um conforto que é difícil de encontrar.",
+        "Você tem um magnetismo natural que faz todos quererem estar perto de você.",
+        "O seu jeito é tão forte e único, que deixa qualquer ambiente mais interessante.",
+        "Você é como uma brisa suave, que traz tranquilidade onde quer que vá.",
+        "Seu riso tem uma leveza que contagia todos ao redor.",
+        "Você consegue ser ao mesmo tempo sofisticada e autêntica, é uma combinação rara.",
+        "Você é alguém que sempre tem algo único a oferecer, seja com um gesto ou uma palavra.",
+        "Sua timidez só realça o quanto você é adorável.",
+        "Você tem uma energia que faz tudo ao seu redor brilhar.",
+        "Eu sou fascinado pela sua beleza, que é tão natural e autêntica.",
+        "Seu jeito tímido é encantador e faz você ainda mais especial.",
+        "Eu adoro como você consegue ser leve em um mundo tão agitado.",
+        "Você tem a capacidade de transformar um dia comum em algo inesquecível.",
+        "Sua capacidade de fazer as pessoas sorrirem é algo raro e maravilhoso.",
+        "Eu admiro tanto a forma como você se importa com os outros, é algo genuíno.",
+        "Sua simpatia é algo que não passa despercebido por ninguém.",
+        "Você tem um jeito tão gracioso que faz tudo parecer mais bonito.",
+        "Sua energia é um verdadeiro presente para quem tem a sorte de te conhecer.",
+        "Admiro a maneira como você sempre encontra beleza nas coisas simples.",
+        "Você é uma pessoa que deixa o mundo ao seu redor mais colorido e alegre.",
+        "Você tem uma personalidade que é impossível não admirar.",
+        "Seu jeito tímido é como um segredo bonito que só poucos têm o privilégio de conhecer.",
+        "Eu nunca canso de admirar a sua capacidade de fazer todos ao seu redor se sentirem bem.",
+        "Você é a prova de que a beleza vai além da aparência, ela está na essência.",
+        "Seu jeito é tão doce que não tem como não gostar de você.",
+        "Você tem uma maneira de ver o mundo que é única e inspiradora.",
+        "Você é uma pessoa com uma beleza que só cresce com o tempo.",
+        "Eu sou grato por ter alguém como você ao meu redor, sua presença é incrível.",
+        "Sua amizade é um dos maiores presentes que a vida me deu.",
+        "Você é aquela amiga que eu posso contar em qualquer momento, não importa o que aconteça.",
+        "Eu me sinto tão sortudo por ter você na minha vida, sua amizade é única.",
+        "Sua amizade me traz uma paz e uma felicidade que eu não sabia que existiam.",
+        "Eu agradeço todos os dias pela sua amizade, ela faz minha vida mais colorida.",
+        "Você não é só amiga, é uma verdadeira parceira de vida.",
+        "Tener você ao meu lado me faz sentir que não há nada impossível de ser conquistado.",
+        "Sua amizade é a melhor coisa que já aconteceu para mim, é como um tesouro que eu cuido com muito carinho.",
+        "Você tem uma maneira única de fazer a amizade ser ainda mais especial, não tem como não valorizar.",
+        "Eu sou tão grato pela sua amizade, ela faz meu mundo muito melhor."
+    ];
+
+    const button = document.getElementById('generate-btn');
+    const complimentText = document.getElementById('compliment');
+
+    if (button && complimentText) {
+        button.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            complimentText.textContent = compliments[randomIndex];
+        });
+    } else {
+        console.error("Os elementos para o botão ou para o texto do elogio não foram encontrados no DOM.");
+    }
+});
+
+    </script>
+</body>
+</html>
